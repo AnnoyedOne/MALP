@@ -1,0 +1,21 @@
+.MODEL SMALL
+
+ .DATA
+
+ NUM1 DB 82H
+
+ .CODE
+
+ MOV AX, @DATA
+
+ MOV DS,AX
+
+ MOV AL, NUM1
+
+ SAL AL, 01H
+
+ MOV AH,4CH
+
+ INT 21H
+
+ END
