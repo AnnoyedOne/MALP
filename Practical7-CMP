@@ -1,0 +1,33 @@
+.MODEL SMALL
+
+ .DATA
+
+ A DB 05H
+
+ B DB 02H
+
+ .CODE
+
+ MOV AX, @DATA
+
+ MOV DS,AX
+
+ MOV AL, A
+
+ MOV BL,B
+
+ CMP AL,BL
+
+ JMP NEXT
+
+ MOV CL,BL
+
+ JMP NEXT1
+
+ NEXT: MOV CL,AL
+
+ MOV AH,4CH
+
+ INT 21H
+
+ NEXT1: END
